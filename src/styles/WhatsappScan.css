@@ -1,0 +1,70 @@
+/* WhatsappScan.css */
+
+.whatsapp-qr-section {
+  width: 100%;
+  padding: 20px;
+  background-color: #dc9898;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+}
+
+.whatsapp-text-section {
+  flex: 1; /* Take up remaining space */
+  padding-left: 30px;
+}
+
+.whatsapp-text-section p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 10px;
+}
+
+.whatsapp-text-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  width: 50%;
+  color: #333;
+}
+
+.qr-code-container {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-container p {
+  font-size: 1.1rem;
+  color: #202020;
+  width: 50%;
+  padding: 10px;
+}
+
+.qr-code-container img {
+  width: 500px;
+  /* margin -bottom: 10px; */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .qr-code-container {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qr-code-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .whatsapp-text-section h1 {
+    font-size: 1.5rem;
+  }
+}

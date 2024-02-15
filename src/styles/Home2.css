@@ -1,0 +1,241 @@
+/* Home2.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.home-2 {
+  margin-top: 5%;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  /* margin:  10%; 10% margin from left and right */
+}
+
+/* Home2.css */
+
+.text {
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  width: 90%; /* Adjusted width for better responsiveness */
+  position: absolute;
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Added shadow for better visibility */
+}
+
+.text:hover {
+  background: #fff;
+  cursor: pointer;
+}
+
+.text h1 {
+  font-size: 3rem; /* Adjusted font size for better readability */
+  color: #202020;
+  letter-spacing: 0.5px;
+}
+
+.text hr {
+  width: 60%; /* Adjusted width for better responsiveness */
+  margin: 20px auto; /* Center the HR element */
+  border: 2px solid orange;
+}
+
+.text p {
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  color: #000;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.text input {
+  padding: 10px;
+  width: 150px; /* Adjusted width for better responsiveness */
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  border: none;
+  border-radius: 10px;
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+}
+
+.text input:hover {
+  background-color: darkorange; /* Darker color on hover */
+}
+
+.home-2-img {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.image-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-2-img img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Prevent image from overflowing its container */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .text {
+    width: 80%;
+  }
+
+  .text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text hr {
+    width: 70%;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+
+  .text input {
+    width: 120px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .text {
+    width: 90%;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .text hr {
+    width: 80%;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  .text input {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* YourComponent.css */
+
+/* Home2.css */
+
+.boxes {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0; /* Add some margin for spacing */
+  justify-content: space-around; /* Center the boxes horizontally */
+}
+
+.boxes h2 {
+  margin-bottom: 10px;
+  font-size: 2rem; /* Adjusted font size for better responsiveness */
+  text-align: center; /* Center the heading */
+}
+
+.box-image {
+  width: 45%; /* Adjusted width for better responsiveness */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.box-image img {
+  height: 40vh;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .box-image {
+    width: 30%; /* Adjusted width for better responsiveness */
+  }
+}
+
+/* Responsive design for screens up to 480px wide */
+@media only screen and (max-width: 480px) {
+  .box-image {
+    width: 20%; /* Adjusted width for better responsiveness */
+  }
+}
+@media only screen and (min-width: 500px) {
+  .box-image img {
+    max-width: 70%; /* Adjusted width for better responsiveness */
+  }
+}
+
+
+/* //icons  */
+.home-category {
+  text-align: center;
+  padding: 20px;
+}
+
+.category-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.category-item {
+  cursor: pointer;
+  text-align: center;
+}
+.category-box a {
+  text-decoration: none;
+  color: black;
+}
+
+.category-item img {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px;
+}
+
+.category-item p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Responsive design for screens up to 768px wide */
+@media only screen and (max-width: 768px) {
+  .box-details {
+    width: 25%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Responsive design for screens up to 480px wide */
+@media only screen and (max-width: 480px) {
+  .box-details {
+    width: 50%; /* Adjust width for mobile screens */
+  }
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+  .home-2 {
+    margin: 0 5%; /* Adjust the margin for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-2 {
+    margin: 0; /* Remove margin for even smaller screens */
+  }
+}

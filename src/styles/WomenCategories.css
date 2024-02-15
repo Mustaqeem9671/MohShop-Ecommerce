@@ -1,0 +1,108 @@
+/* WomenCategories.css */
+
+.women-categories {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.women-btns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.women-btns button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.women-sub-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.women-card {
+  position: relative;
+  width: 250px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.women-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.women-card h2,
+.women-card h3,
+.women-card p {
+  margin: 0;
+  text-align: center;
+}
+
+.cart-btn-container {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 100%; /* Cover full width */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.add-to-cart-btn {
+  width: auto; /* Cover full width */
+  padding: 10px 15px;
+  background-color: #aecfe4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: small;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Adjust the scaling factor */
+}
+
+.women-card:hover {
+  transform: scale(1.05);
+}
+
+.women-card:hover .cart-btn-container {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .women-sub-category {
+      justify-content: center;
+  }
+
+  .women-card {
+      width: 100%;
+  }
+
+  .add-to-cart-btn {
+      width: auto; /* Adjust for smaller devices */
+  }
+}

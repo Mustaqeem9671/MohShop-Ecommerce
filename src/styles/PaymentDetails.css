@@ -1,0 +1,56 @@
+/* PaymentDetails.css */
+
+.payment-details  {
+    box-sizing: border-box;
+    /* background: #2a2a2a; */
+  }
+  
+  .payment-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+ .payment-details form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+ .payment-details label {
+    margin-top: 10px;
+  }
+  
+ .payment-details input {
+    padding: 10px;
+    margin-bottom: 15px;
+    /* width: 100%; */
+    box-sizing: border-box;
+  }
+  
+ .payment-details input#expiry {
+    width: 45%; /* Adjust width for the expiry date input */
+  }
+  
+  .payment-details button {
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .payment-details button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 768px) {
+    .payment-details form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+   .payment-details input#expiry {
+      width: auto; /* Reset width for the expiry date input on larger screens */
+    }
+  }
+  

@@ -1,0 +1,105 @@
+/* MenCategories.css */
+
+.men-Categories {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.btn button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.men-sub-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.men-card {
+  width: calc(25% - 20px); /* Adjust the width based on your design */
+  margin: 15px 10px; /* Adjust the margins for spacing between cards */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.men-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.men-card h2,
+.men-card h3,
+.men-card p {
+  margin: 0;
+  text-align: start;
+  padding: 5px;
+}
+
+.btn button {
+  display: block; /* Initially show buttons */
+}
+
+.menu-icon {
+  display: none; /* Initially hide menu icon */
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .men-card {
+    width: calc(33.33% - 20px);
+    margin: 15px 5px; /* Adjust the margins for spacing between cards */
+  }
+}
+
+@media only screen and (max-width: 983px) {
+  .men-card {
+    width: calc(50% - 20px);
+    margin: 15px 5px; /* Adjust the margins for spacing between cards */
+  }
+}
+
+@media only screen and (max-width: 778px) {
+  .btn button {
+    display: none; /* Hide regular buttons on small devices */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on small devices */
+    font-size: 24px; /* Adjust font size as needed */
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 500){
+  .btn button {
+    display: none; /* Hide regular buttons on small devices */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on small devices */
+    font-size: 24px; /* Adjust font size as needed */
+    cursor: pointer;
+  }
+}

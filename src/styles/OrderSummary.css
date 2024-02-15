@@ -1,0 +1,30 @@
+/* OrderSummary.css */
+
+.orderSummary-main div {
+    box-sizing: border-box;
+  }
+  
+ .orderSummary-main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for displaying order items and total go here */
+  
+ .orderSummary-main button {
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+ .orderSummary-main button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 768px) {
+    /* Additional styles for larger screens go here */
+  }
+  

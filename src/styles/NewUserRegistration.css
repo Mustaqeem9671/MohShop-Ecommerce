@@ -1,0 +1,97 @@
+body {
+  /* font-family: "Arial", sans-serif; */
+  /* color: #333; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; Prevent horizontal scrolling */
+}
+
+.newuser-main {
+  /* margin-top: 5%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+.newuser-main h2 {
+  font-size: 30px;
+  margin-top: 10%;
+}
+.newuser-form {
+  display: flex;
+  background-color: #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  /* width: 100%; */
+  box-sizing: border-box;
+  margin-top: 20px; /* Add margin to create space between navbar and form */
+}
+
+.newuser-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.newuser-img img {
+  border-radius: 5%;
+  max-width: 100%;
+  height: auto;
+}
+
+.newuser-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.newuser-details input,
+.newuser-details textarea,
+.newuser-details select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.newuser-details button {
+  color: #000;
+  width: auto;
+  font-size: large;
+  align-items: center;
+  background: white;
+}
+
+.newuser-btn button {
+  background-color: #5d615d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  /* margin-left: 30px; */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newuser-btn button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styling */
+
+@media screen and (max-width: 768px) {
+  .newuser-main {
+    justify-content: center;
+  }
+
+  .newuser-btn {
+    justify-content: center;
+  }
+}

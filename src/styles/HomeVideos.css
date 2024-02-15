@@ -1,0 +1,36 @@
+/* YourComponent.css */
+
+.box-videos {
+    /* text-align: center; */
+  }
+  
+  .videos {
+    display: flex;
+    overflow: hidden;
+    margin: 0 -10px;
+  }
+  
+  .video-item {
+    flex: 0 0 100%;
+    padding: 0 10px;
+    position: relative;
+  }
+  
+  .video-item video {
+    /* width: 100%; */
+    width: 500px;
+    height: auto;
+    margin: 2px 5%;
+    border-radius: 10px;
+  }
+  
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,47 @@
+/* ShippingInfo.css */
+
+.shiping-main div {
+    box-sizing: border-box;
+  }
+  
+  .shiping-main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .shiping-main form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .shiping-main label {
+    margin-top: 10px;
+  }
+  
+  .shiping-main input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .shiping-main button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .shiping-main button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (min-width: 768px) {
+    .shiping-main form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  

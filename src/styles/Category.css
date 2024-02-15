@@ -1,0 +1,61 @@
+/* styles/Category.css */
+
+.category-main {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .category-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card-category {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cards-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card-category {
+    width: 300px;
+    margin: 10px 35px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-category img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .card-category h1, h3, p {
+    margin: 0;
+    text-align: start;
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .cards-category {
+      justify-content: center;
+    }
+  
+    .card-category {
+      width: 100%;
+    }
+  }
+  
