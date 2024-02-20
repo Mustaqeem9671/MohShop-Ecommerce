@@ -96,7 +96,7 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="/favorite"
+              to="/favoritespage"
               className="navbar--content"
             >
               Favorites

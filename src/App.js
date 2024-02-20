@@ -1,4 +1,4 @@
-// import './App.css';
+import "./App.css";
 
 import AboutUs from "./components/AboutUs";
 import Cart from "./components/Cart";
@@ -19,6 +19,7 @@ import ChildrenCategories from "./components/ChildrenCategories";
 import Profile from "./authPages/Profile";
 import NewUserRegistration from "./authPages/NewUserRegistration";
 import MainPage from "./welcome/MainPage";
+import FavoritesPage from "./components/FavoritesPage";
 // import NavbarHeader from "./welcome/NavbarHeader";
 
 function App() {
@@ -28,10 +29,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        {/* <NavbarHeader /> */}
         <Routes>
           <Route path="/loginPage" element={<LoginPage />} />
-          {/* <Route path="/navbarheader" element={<NavbarHeader />} /> */}
 
           <Route path="/newuserRegister" element={<NewUserRegistration />} />
           <Route path="/navbar" element={<Navbar />} />
@@ -42,6 +41,7 @@ function App() {
           <Route path="/category/*" element={<Category />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/contactpage" element={<ContactPage />} />
+          <Route path="/favoritespage" element={<FavoritesPage />} />
 
           <Route path="/men" element={<MenCategories />} />
           <Route path="/women" element={<WomenCategories />} />

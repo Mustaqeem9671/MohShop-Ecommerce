@@ -1,65 +1,131 @@
 /* ChildrenCategories.css */
 
 .children-categories {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .category-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .category-buttons button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: large;
-    transition: background-color 0.3s ease;
-  }
-  
-  .category-buttons button:hover {
-    background-color: #2980b9;
-  }
-  
-  .children-sub-category {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+}
+.child--buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.child--buttons button {
+  color: black;
+  font-size: 16px;
+}
+.children-sub-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.child--menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.children-card {
+  width: calc(29% - 20px); /* Adjust the width based on your design */
+  margin: 2% 10px; /* Adjust the margins for spacing between cards */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -20px -20px 10px rgba(38, 37, 37, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.children-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.children-card h2,
+.children-card h3,
+.children-card p {
+  margin: 0;
+  text-align: start;
+  padding: 5px;
+}
+
+/* .btn button {
+  display: block; 
+} */
+
+.child--menu-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
   .children-card {
-    width: calc(30% - 10px); /* Adjust the width based on your design */
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    width: calc(80.33% - 20px);
+    margin: 15px 5px; /* Adjust the margins for spacing between cards */
   }
-  
-  .children-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+}
+
+@media only screen and (max-width: 983px) {
+  .children-card {
+    width: calc(70% - 20px);
+    margin: 15px 5px; /* Adjust the margins for spacing between cards */
   }
-  
-  .children-card h2,
-  .children-card h3,
-  .children-card p {
-    margin: 0;
-    text-align: start;
-    padding: 5px;
+}
+
+@media only screen and (max-width: 778px) {
+  .child--buttons button {
+    display: none; /* Hide regular buttons on small devices */
   }
-  
-  @media only screen and (max-width: 768px) {
-    .children-card {
-      width: calc(50% - 20px);
-    }
+  .child-buttons {
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
   }
-  
+  .child--menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .child--men--menu button {
+    margin: 0px 20px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .child--men--menu bottom:hover {
+    color: #ffffff;
+    background-color: #5e3bee;
+  }
+}
+
+@media only screen and (max-width: 500) {
+  .child-buttons button {
+    display: none;
+  }
+  .child--menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .child--menu button {
+    margin: 0px 20px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: black;
+  }
+  .men--menu bottom:hover {
+    color: #ffffff;
+    background-color: #5e3bee;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .children-card {
+    width: calc(90% - 20px);
+  }
+}

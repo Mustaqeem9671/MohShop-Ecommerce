@@ -1,97 +1,96 @@
-body {
-  /* font-family: "Arial", sans-serif; */
-  /* color: #333; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* overflow-x: hidden; Prevent horizontal scrolling */
-}
-
-.newuser-main {
-  /* margin-top: 5%; */
+.newuser----main {
   display: flex;
+  padding: 150px 85px;
   flex-direction: column;
-  align-items: center;
-  background-color: #f4f4f4;
-  min-height: 100vh;
-}
-.newuser-main h2 {
-  font-size: 30px;
-  margin-top: 10%;
-}
-.newuser-form {
-  display: flex;
-  background-color: #000;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 100%;
-  /* width: 100%; */
-  box-sizing: border-box;
-  margin-top: 20px; /* Add margin to create space between navbar and form */
-}
-
-.newuser-img {
-  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  text-align: center;
+  gap: 64px;
 }
-
-.newuser-img img {
-  border-radius: 5%;
-  max-width: 100%;
-  height: auto;
-}
-
-.newuser-details {
+.newuser--form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  width: 40%;
+  row-gap: 32px;
 }
-
-.newuser-details input,
-.newuser-details textarea,
-.newuser-details select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: calc(100% - 20px); /* Adjusted width to account for padding */
-  transition: border-color 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+.newuser--details {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 32px;
+  row-gap: 32px;
 }
-.newuser-details button {
-  color: #000;
-  width: auto;
-  font-size: large;
+.newuser---label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10.6px;
+  flex: 1 0 0;
+  width: 100%;
+}
+.newuser--input {
+  display: flex;
+  font-family: "Roboto";
+  padding: 16px;
   align-items: center;
-  background: white;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1.333px solid var(--primary);
+  background: var(--white);
 }
-
-.newuser-btn button {
-  background-color: #5d615d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  /* margin-left: 30px; */
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 21.2052C16.2374 21.4981 15.7626 21.4981 15.4697 21.2052L7.82318 13.5587C7.53029 13.2658 7.53029 12.791 7.82318 12.4981L8.17674 12.1445C8.46963 11.8516 8.9445 11.8516 9.2374 12.1445L16 18.9071L22.7626 12.1445C23.0555 11.8516 23.5303 11.8516 23.8232 12.1445L24.1768 12.4981C24.4697 12.791 24.4697 13.2658 24.1768 13.5587L16.5303 21.2052Z" fill="%23033333"/></svg>')
+    white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 21.2052C16.2374 21.4981 15.7626 21.4981 15.4697 21.2052L7.82318 13.5587C7.53029 13.2658 7.53029 12.791 7.82318 12.4981L8.17674 12.1445C8.46963 11.8516 8.9445 11.8516 9.2374 12.1445L16 18.9071L22.7626 12.1445C23.0555 11.8516 23.5303 11.8516 23.8232 12.1445L24.1768 12.4981C24.4697 12.791 24.4697 13.2658 24.1768 13.5587L16.5303 21.2052Z" fill="%23033333"/></svg>')
+    white no-repeat calc(100% - 20px); /* Better placement regardless of input width */
 }
-
-.newuser-btn button:hover {
-  background-color: #45a049;
+select::-ms-expand {
+  display: none;
 }
+.newuser----select {
+  height: 41px;
+  border: 1px solid #5a60ac;
+  border-radius: 0.15em;
+  border-radius: 5px;
+  transform: translatey(-0.075em);
+} 
 
-/* Responsive Styling */
 
-@media screen and (max-width: 768px) {
-  .newuser-main {
-    justify-content: center;
+
+@media only screen and (max-width: 1200px) {
+  .newuser----main,
+  .newuser----select {
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
-
-  .newuser-btn {
-    justify-content: center;
+  .newuser--form,
+  .newuser----select {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .newuser----main,
+  .newuser----select {
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .newuser----main {
+    margin-top: 7%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .newuser----main {
+    margin-top: 50%;
+    align-items: center;
+    padding: 20px;
   }
 }

@@ -79,15 +79,18 @@ const NewUserRegistration = () => {
   };
 
   return (
-    <div className="newuser-main">
+    <div className="newuser----main">
       <h2> New Registration</h2>
       <Link to='/navbarheader'>Go</Link>
-      <form onSubmit={handleRegistration} className="newuser-form">
+      <form onSubmit={handleRegistration} className="newuser--form">
         <div className="newuser-img">
           <img src={newuserProfile} alt="" />
         </div>
-        <div className="newuser-details">
+        <div className="newuser--details">
+        <label htmlFor="firstName" className="newuser---label">
+         <span className="text-md">First Name</span>
           <input
+          className="newuser--input text-md"
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -95,8 +98,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="lastName" className="newuser---label">
+         <span className="text-md">Last Name</span>
           <input
+          className="newuser--input text-md"
             type="text"
             name="lastName"
             placeholder="Last Name"
@@ -104,8 +111,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="phoneNumber" className="newuser---label">
+         <span className="text-md">Phone Number</span>
           <input
+          className="newuser--input text-md"
             type="tel"
             name="phoneNumber"
             placeholder="Phone Number"
@@ -113,8 +124,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="verificationCode" className="newuser---label">
+         <span className="text-md">Code </span>
           <input
+          className="newuser--input text-md"
             type="text"
             name="verificationCode"
             placeholder="Verification Code"
@@ -122,8 +137,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="pincode" className="newuser---label">
+         <span className="text-md">PinCode </span>
           <input
+          className="newuser--input text-md"
             type="text"
             name="pincode"
             placeholder="Pincode"
@@ -131,16 +150,24 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="address" className="newuser---label">
+         <span className="text-md">Address</span>
           <textarea
+className="newuser--input text-md"
             name="address"
             placeholder="Address"
             value={formData.address}
             onChange={handleInputChange}
             required
           ></textarea>
+          </label>
 
+          <label htmlFor="email" className="newuser---label">
+         <span className="text-md">Email</span>
           <input
+          className="newuser--input text-md"
             type="email"
             name="email"
             placeholder="Email"
@@ -148,8 +175,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="confirmEmail" className="newuser---label">
+         <span className="text-md">Confirm Email</span>
           <input
+          className="newuser--input text-md"
             type="email"
             name="confirmEmail"
             placeholder="Confirm Email"
@@ -157,8 +188,12 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="password" className="newuser---label">
+         <span className="text-md">Password</span>
           <input
+          className="newuser--input text-md"
             type="password"
             name="password"
             placeholder="Password"
@@ -166,8 +201,13 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="confirmPassword" className="newuser---label">
+         <span className="text-md">Confirm Password</span>
           <input
+                        className="newuser--input text-md"
+
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"
@@ -175,8 +215,13 @@ const NewUserRegistration = () => {
             onChange={handleInputChange}
             required
           />
+          </label>
 
+          <label htmlFor="state" className="newuser---label">
+         <span className="text-md">State</span>
+         </label>
           <select
+           className="newuser----select"
             name="state"
             value={formData.state}
             onChange={handleStateChange}
@@ -190,7 +235,11 @@ const NewUserRegistration = () => {
             ))}
           </select>
 
+          <label htmlFor="city" className="newuser---label">
+         <span className="text-md">City</span>
+         </label>
           <select
+           className="newuser----select"
             name="city"
             value={formData.city}
             onChange={handleCityChange}
@@ -203,7 +252,10 @@ const NewUserRegistration = () => {
               </option>
             ))}
           </select>
-          <button  type="submit">Register</button>
+          <div className="buttons">
+          <button className="btn btn-primary contact--form--btn">Submit</button>
+        </div>
+          {/* <button  type="submit">Register</button> */}
         </div>
         {/* <div className="newuser-btn"> */}
         {/* </div> */}
