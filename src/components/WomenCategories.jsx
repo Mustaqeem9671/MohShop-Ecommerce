@@ -1,5 +1,3 @@
-// WomenCategories.jsx
-
 import React, { useEffect, useState } from "react";
 import "../styles/WomenCategories.css";
 import Cart from "./Cart";
@@ -9,7 +7,7 @@ import ViewItem from "./ViewItem";
 const WomenCategories = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [cart, setCart] = useState([]); // State to track the cart items
+  const [cart, setCart] = useState([]);
   const navigate = useNavigate();
   const { itemId } = useParams();
 
@@ -112,31 +110,54 @@ const WomenCategories = () => {
   const viewItems = (id) => {
     const selectedItem = renderCategory().find((item) => item.id === itemId);
     setSelectedItem(selectedItem);
-    navigate(`/viewitems/${id}`); // Navigate to the item details page
+    navigate(`/viewitems/${id}`);
   };
 
   return (
     <div className="women-categories">
       <div className="women-btns">
-        <button onClick={() => setSelectedCategory("newArrivals")}>
+        <button
+          onClick={() => setSelectedCategory("newArrivals")}
+          className="btn btn-primary"
+        >
           New Arrivals
         </button>
-        <button onClick={() => setSelectedCategory("WomenFootwear")}>
+        <button
+          onClick={() => setSelectedCategory("WomenFootwear")}
+          className="btn btn-primary"
+        >
           Footwear
         </button>
-        <button onClick={() => setSelectedCategory("womenDress")}>
+        <button
+          onClick={() => setSelectedCategory("womenDress")}
+          className="btn btn-primary"
+        >
           Clothes
         </button>
-        <button onClick={() => setSelectedCategory("womenJewelry")}>
+        <button
+          onClick={() => setSelectedCategory("womenJewelry")}
+          className="btn btn-primary"
+        >
           Jewelry
         </button>
-        <button onClick={() => setSelectedCategory("womenMakeup")}>
+        <button
+          onClick={() => setSelectedCategory("womenMakeup")}
+          className="btn btn-primary"
+        >
           Makeup
         </button>
-        <button onClick={() => setSelectedCategory("westerWear")}>
+        <button
+          onClick={() => setSelectedCategory("westerWear")}
+          className="btn btn-primary"
+        >
           Western Wear
         </button>
-        <button onClick={() => setSelectedCategory("items")}>click here</button>
+        <button
+          onClick={() => setSelectedCategory("items")}
+          className="btn btn-primary"
+        >
+          click here
+        </button>
         {/* Add more buttons for other categories as needed */}
       </div>
 
@@ -149,29 +170,31 @@ const WomenCategories = () => {
             onMouseLeave={() => setHoveredItem(null)}
           >
             <img src={item.image} alt={item.title} />
-            {hoveredItem === item.id && (
-              <div className="cart-btn-container">
+           
+            <h3>{item.brand}</h3>
+            <h4>{item.title}</h4>
+            <p>{item.price}</p>
+            <div className="viewandcart">
+              <Link to={`/viewitems/${item.id}`}>
                 <button
-                  className="add-to-cart-btn"
+                  className="view"
+                  id=""
+                  onClick={() => viewItems(item.id)}
+                >
+                  View
+                </button>
+                <button
+                  className="cart"
+                  id=""
                   onClick={() => {
                     handleAddToCart(item);
                     setSelectedItem(item); // Set selected item when adding to cart
                   }}
                 >
-                  Add to Cart
+                  Add to cart
                 </button>
-              </div>
-            )}
-            {/* <h1>{item.id}</h1> */}
-            <h2>{item.brand}</h2>
-            <h3>{item.title}</h3>
-            <p>{item.price}</p>
-            <p>{item.name}</p>
-            <Link to={`/viewitems/${item.id}`}>
-              <button id="buton" onClick={() => viewItems(item.id)}>
-                View
-              </button>
-            </Link>
+              </Link>
+            </div>
           </div>
         ))}
       </div>

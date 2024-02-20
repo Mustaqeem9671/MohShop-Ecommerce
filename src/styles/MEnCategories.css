@@ -1,52 +1,50 @@
 /* MenCategories.css */
 
 .men-Categories {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 20px;
 }
 
-.btn {
+.men-btns {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin: 30px;
 }
 
-.btn button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: large;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
+.men-btns button {
+  color: black;
+  font-size: 16px;
 }
 
 .men-sub-category {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.men--menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .men-card {
-  width: calc(25% - 20px); /* Adjust the width based on your design */
-  margin: 15px 10px; /* Adjust the margins for spacing between cards */
+  width: calc(29% - 20px); /* Adjust the width based on your design */
+  margin: 2% 10px; /* Adjust the margins for spacing between cards */
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -20px -20px 10px rgba(38, 37, 37, 0.1);
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .men-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .men-card h2,
@@ -65,7 +63,6 @@ button:hover {
   display: none; /* Initially hide menu icon */
 }
 
-
 @media only screen and (max-width: 1024px) {
   .men-card {
     width: calc(33.33% - 20px);
@@ -75,31 +72,57 @@ button:hover {
 
 @media only screen and (max-width: 983px) {
   .men-card {
-    width: calc(50% - 20px);
+    width: calc(100% - 20px);
     margin: 15px 5px; /* Adjust the margins for spacing between cards */
   }
 }
 
 @media only screen and (max-width: 778px) {
-  .btn button {
+  .men-btns button {
     display: none; /* Hide regular buttons on small devices */
   }
-
+  .men-btns {
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+  }
   .menu-icon {
     display: block; /* Show menu icon on small devices */
     font-size: 24px; /* Adjust font size as needed */
     cursor: pointer;
+  }
+  .men--menu button {
+    margin: 0px 20px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .men--menu bottom:hover {
+    color: #ffffff;
+    background-color: #5e3bee;
   }
 }
 
-@media only screen and (max-width: 500){
-  .btn button {
-    display: none; /* Hide regular buttons on small devices */
+@media only screen and (max-width: 500) {
+  .men-btns button {
+    display: none;
   }
-
   .menu-icon {
-    display: block; /* Show menu icon on small devices */
-    font-size: 24px; /* Adjust font size as needed */
+    display: block;
+    font-size: 24px;
     cursor: pointer;
+  }
+  .men--menu button {
+    margin: 0px 20px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .men--menu bottom:hover {
+    color: #ffffff;
+    background-color: #5e3bee;
   }
 }

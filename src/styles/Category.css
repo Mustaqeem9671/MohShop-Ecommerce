@@ -1,61 +1,75 @@
 /* styles/Category.css */
 
+/* Default styles */
 .category-main {
-    margin-top: 7%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .category-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .card-category {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cards-category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .card-category {
-    width: 300px;
-    margin: 10px 35px;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .card-category img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-  }
-  
-  .card-category h1, h3, p {
-    margin: 0;
-    text-align: start;
-  }
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.category-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 30px;
+}
 
-  
-  @media (max-width: 768px) {
-    .cards-category {
-      justify-content: center;
-    }
-  
-    .card-category {
-      width: 100%;
-    }
+.category-buttons a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px 10px;
+  padding: 10px;
+  border: 1px solid #6f95ad;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.category-buttons a:hover {
+  color: #fff;
+  background-color: #5e3bee;
+  transform: scale(1s);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 1200px) {
+  .category-main {
+    margin-top: 12%;
   }
-  
+}
+
+@media only screen and (max-width: 992px) {
+  .category-main {
+    margin-top: 16%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .category-main {
+    margin-top: 22%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .category-main {
+    margin-top: 26%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .category-main {
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .category-main {
+    margin-top: 35%;
+  }
+}
+@media only screen and (max-width: 100px) {
+  .category-main {
+    margin-top: 40%;
+  }
+}

@@ -1,27 +1,120 @@
-import React, { useEffect, useState, useRef } from 'react';
-import '../styles/Contact.css';
+// import React, { useEffect, useState, useRef } from 'react';
+// import '../styles/Contact.css';
+
+// const ContactPage = () => {
+//   const [indianStates, setIndianStates] = useState([]);
+//   const [indianCities, setIndianCities] = useState([]);
+//   const [selectedState, setSelectedState] = useState('');
+//   const formRef = useRef(null);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const resStates = await fetch('http://localhost:4000/indianStates');
+//         const dataStates = await resStates.json();
+//         setIndianStates(dataStates || []);
+
+//         setSelectedState('');
+
+//         const resCities = await fetch('http://localhost:4000/indianCities');
+//         const dataCities = await resCities.json();
+//         setIndianCities(dataCities || []);
+//       } catch (error) {
+//         console.error('Error fetching data:', error);
+//       }
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   const handleStateChange = (e) => {
+//     setSelectedState(e.target.value);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log('Form submitted');
+//     formRef.current.reset();
+//     setSelectedState('');
+//   };
+
+//   return (
+//     <div className="container">
+//       <h2>Contact Us</h2>
+//       <form ref={formRef} onSubmit={handleSubmit}>
+//         <label htmlFor="name">First Name:</label>
+//         <input type="text" id="name" name="first_name" required />
+//         <label htmlFor="name">LAst Name:</label>
+//         <input type="text" id="name" name="second_name" required />
+
+//         <label htmlFor="email">Email:</label>
+//         <input type="email" id="email" name="form_name" required />
+
+//         <label htmlFor="phoneNumber">Phone Number:</label>
+//         <input type="tel" id="phoneNumber" name="mobile_number" required />
+
+//         <label htmlFor="state">State:</label>
+//         <select id="state" name="state" onChange={handleStateChange} required value={selectedState}>
+//           <option value="" disabled>
+//             Select State
+//           </option>
+//           {indianStates.map((state) => (
+//             <option key={state.id} value={state.name}>
+//               {state.name}
+//             </option>
+//           ))}
+//         </select>
+
+//         <label htmlFor="city">City:</label>
+//         <select id="city" name="city" required onChange={handleStateChange} value={selectedState}>
+//           <option value="" disabled>
+//             Select City
+//           </option>
+//           {indianCities.map((city) => (
+//             <option key={city.id} value={city.name}>
+//               {city.name}
+//             </option>
+//           ))}
+//         </select>
+
+//         <label htmlFor="address">Address:</label>
+//         <textarea id="address" name="address" rows="4" required></textarea>
+
+//         <label htmlFor="message">Message:</label>
+//         <textarea id="message" name="message" rows="4" required></textarea>
+
+//         <button type="submit">Submit</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default ContactPage;
+
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import "../styles/Contact.css";
 
 const ContactPage = () => {
+  const formRef = useRef(null);
   const [indianStates, setIndianStates] = useState([]);
   const [indianCities, setIndianCities] = useState([]);
-  const [selectedState, setSelectedState] = useState('');
-  const formRef = useRef(null);
+  const [selectedState, setSelectedState] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resStates = await fetch('http://localhost:4000/indianStates');
+        const resStates = await fetch("http://localhost:4000/indianStates");
         const dataStates = await resStates.json();
         setIndianStates(dataStates || []);
-        
-        // Reset selectedState to an empty string when fetching states
-        setSelectedState('');
 
-        const resCities = await fetch('http://localhost:4000/indianCities');
+        const resCities = await fetch("http://localhost:4000/indianCities");
         const dataCities = await resCities.json();
         setIndianCities(dataCities || []);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -32,31 +125,120 @@ const ContactPage = () => {
     setSelectedState(e.target.value);
   };
 
+  const handleCityChange = (e) => {
+    setSelectedCity(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted');
-    // Reset the form using the reset method
+    console.log("Form submitted");
     formRef.current.reset();
-    // Reset selectedState after form submission
-    setSelectedState('');
+    setSelectedState("");
+    setSelectedCity("");
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hc3o9qi",
+        "template_f3ieije",
+        formRef.current,
+        "A7KdIaEiER3UvnzmR"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true); // Set the state to indicate successful submission
+          setTimeout(() => {
+            setIsSubmitted(false); // Reset the state after a delay
+            formRef.current.reset(); // Reset the form fields
+          }, 3000); // Reset after 3 seconds (adjust as needed)
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
-    <div className="container">
-      <h2>Contact Us</h2>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label htmlFor="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required />
-
-        <label htmlFor="state">State:</label>
-        <select id="state" name="state" onChange={handleStateChange} required value={selectedState}>
+    <section id="Contact" className="contact--section">
+      <div>
+        {/* <p className="sub--title">Get In Touch</p> */}
+        <h2>Contact Our Team </h2>
+        <p className="text-lg">
+          {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, odit. */}
+        </p>
+      </div>
+      <form
+        ref={formRef}
+        onSubmit={sendEmail}
+        className="contact--form--container"
+      >
+        {/* Render alert message if form is submitted successfully */}
+        {isSubmitted && (
+          <div className="alert alert-success" role="alert">
+            Message sent successfully!
+          </div>
+        )}
+        <div className="container">
+          <label htmlFor="first-name" className="contact--label">
+            <span className="text-md">First Name</span>
+            <input
+              type="text"
+              className="contact--input text-md"
+              name="first_name"
+              id="first-name"
+              required
+            />
+          </label>
+          <label htmlFor="last-name" className="contact--label">
+            <span className="text-md">Last Name</span>
+            <input
+              type="text"
+              className="contact--input text-md"
+              name="second_name"
+              id="last-name"
+              required
+            />
+          </label>
+          <label htmlFor="email" className="contact--label">
+            <span className="text-md">Email</span>
+            <input
+              type="email"
+              className="contact--input text-md"
+              name="from_name"
+              id="email"
+              required
+            />
+          </label>
+          <label htmlFor="phone-number" className="contact--label">
+            <span className="text-md">phone-number</span>
+            <input
+              type="number"
+              className="contact--input text-md"
+              name="mobile_number"
+              id="phone-number"
+              required
+            />
+          </label>
+        </div>
+        <label className="contact--label" htmlFor="state">
+          <span className="text-md">State</span>
+        </label>
+        <select
+          className="contact----select"
+          id="state"
+          name="state"
+          onChange={handleStateChange}
+          required
+          value={selectedState}
+        >
           <option value="" disabled>
             Select State
           </option>
@@ -67,8 +249,17 @@ const ContactPage = () => {
           ))}
         </select>
 
-        <label htmlFor="city">City:</label>
-        <select id="city" name="city" required onChange={handleStateChange} value={selectedState}>
+        <label className="contact--label" htmlFor="city">
+          <span className="text-md">City</span>
+        </label>
+        <select
+          className="contact----select"
+          id="city"
+          name="city"
+          required
+          onChange={handleCityChange}
+          value={selectedCity}
+        >
           <option value="" disabled>
             Select City
           </option>
@@ -78,16 +269,35 @@ const ContactPage = () => {
             </option>
           ))}
         </select>
-
-        <label htmlFor="address">Address:</label>
-        <textarea id="address" name="address" rows="4" required></textarea>
-
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Submit</button>
+        <label htmlFor="address" className="contact--label">
+          <span className="text-md">Address</span>
+          <textarea
+            className="contact--input text-md"
+            id="address"
+            rows="4"
+            name="address"
+            placeholder="Type your address..."
+          ></textarea>
+        </label>
+        <label htmlFor="message" className="contact--label">
+          <span className="text-md">Message</span>
+          <textarea
+            className="contact--input text-md"
+            id="message"
+            rows="8"
+            name="message"
+            placeholder="Type your message..."
+          ></textarea>
+        </label>
+        <label htmlFor="checkbox" className="checkbox--label">
+          <input type="checkbox" required name="checkbox" id="checkbox" />
+          <span className="text-sm">I accept the terms</span>
+        </label>
+        <div className="buttons">
+          <button className="btn btn-primary contact--form--btn">Submit</button>
+        </div>
       </form>
-    </div>
+    </section>
   );
 };
 
