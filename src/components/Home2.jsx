@@ -24,8 +24,7 @@ const images = [
 ];
 
 const bestSellerImages = [
-  // Add your best seller images here
-  // homeCoverImage1,
+  //best seller
   homeCoverImage2,
   homeCoverImage3,
   homeCoverImage4,
@@ -48,13 +47,13 @@ const Home2 = () => {
   const bestSellerSettings = {
     dots: true,
     infinite: true,
-    speed: 1800, // Set a slower speed (e.g., 1500 milliseconds)
+    speed: 1800, // Set a slower speed 
     autoplay: true,
     autoplaySpeed: 5000,
-    slidesToShow: 2, // Adjust as needed
+    slidesToShow: 2, 
     slidesToScroll: 1,
-    centerMode: true, // Enable center mode
-    centerPadding: "-1px", // Adjust the space between images
+    centerMode: true, 
+    centerPadding: "-1px", 
   };
 
   return (

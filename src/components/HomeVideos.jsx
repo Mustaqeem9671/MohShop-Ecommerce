@@ -35,7 +35,7 @@ const HomeVideos = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
-    <div className="box-videos">
+    <div  className="box-videos">
       <h2>Our Services</h2>
       <Slider ref={sliderRef} {...sliderSettings}>
         {videoSources.map((videoSource, index) => (

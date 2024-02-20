@@ -1,16 +1,14 @@
 /* About.css */
 
 .about-container {
-  /* max-width: 1200px; */
   margin: 4% auto;
   padding: 20px;
 }
 
 .founder-introduction {
-  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 300px;
+  margin: 10px 150px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -18,7 +16,6 @@
 }
 
 .founder-text {
-  width: 60%;
   box-sizing: border-box;
 }
 .founder-text span {
@@ -48,7 +45,7 @@
 }
 
 .founder-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 50%;
 }
@@ -69,34 +66,87 @@
 .ecommerce-details p {
   font-family: "Times New Roman", Times, serif;
   color: #666;
-  margin: 20px 0; /* Adjust margin as needed */
+  margin: 20px 0;
   font-size: 20px;
   letter-spacing: 1px;
   line-height: 1.6;
   text-align: justify;
 }
 
+/* empolyee policy  */
+
+.emp--policy {
+  position: relative;
+  min-height: 1px;
+  text-align: center;
+}
+.emp--policy h3 {
+  font-size: 34px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+.emp--policy p {
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+  color: #666;
+  font-size: 20px;
+  padding: 0 250px;
+  margin-bottom: 10%;
+}
+
+/* our team members section  */
+.our-team--members {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team---members {
+  width: calc(29% - 20px);
+  margin: 2% 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -20px -20px 10px rgba(38, 37, 37, 0.1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.team---members img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  margin: 20px 0;
+  border-radius: 20% 20% 15% 30%;
+}
+.team---members p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* our models  */
 .meet-our-people {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .person {
-  width: calc(28.33% - 40px); /* Adjust margin as needed */
+  width: calc(29% - 20px);
+  margin: 2% 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: -20px -20px 10px rgba(38, 37, 37, 0.1);
   box-sizing: border-box;
-  margin: 10px 30px !important;
-  margin-bottom: 20px;
-  text-align: center;
+  cursor: pointer;
 }
 
 .person img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
-  margin: 20px 0; /* Allows images to maintain their aspect ratio */
-  /* Allows images to maintain their aspect ratio */
-  /* Allows images to maintain their aspect ratio */
+  margin: 20px 0;
   border-radius: 20% 20% 15% 30%;
 }
 
@@ -105,22 +155,168 @@
   font-size: 16px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .person {
-    width: calc(50% - 20px); /* 2 persons per row on medium screens */
+/* culture section  */
+.culture--in--mohshop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.culture--in--mohshop img {
+  margin-left: 7%;
+}
+.culture--text {
+  padding: 6%;
+}
+.culture--text h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 21px;
+}
+.culture--text h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: inherit;
+}
+.culture--text p {
+  color: #848484;
+  line-height: 1.7;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+  font-size: 21px !important;
+  font-family: "Nunito Sans", sans-serif;
+}
+.culture--btn button {
+  margin: 15px 0px;
+  background: #0574d8;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: auto;
+  padding: 2% 10%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* package section  */
+.our-packaging {
+  background-image: url(../components/image/pack.svg);
+  padding: 5%;
+  text-align: center;
+}
+.our-packaging h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: inherit;
+}
+
+.package--details p {
+  color: #848484;
+  padding: 2% 19%;
+  line-height: 1.5;
+  font-size: 21px !important;
+  font-family: "Nunito Sans", sans-serif;
+}
+.package--details img {
+  width: 75%;
+  height: 500px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+  border-radius: 4px;
+}
+.package-btn button {
+  color: #333;
+  font-size: 16px;
+}
+
+/* responsive design  */
+@media only screen and (max-width: 1260px) {
+  .person,
+  .team---members {
+    width: calc(33.33% - 40px);
+    margin: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .person {
-    width: 100%; /* 1 person per row on smaller screens */
+@media only screen and (max-width: 1000px) {
+  .person,
+  .team---members {
+    width: calc(50% - 30px);
+    margin: 15px;
   }
-}
-
-/* Add responsive styles as needed */
-@media (max-width: 768px) {
-  .ecommerce-details {
+  .emp--policy p {
     padding: 10px;
+  }
+  .emp--policy h3 {
+    text-align: start;
+    font-family: inherit;
+    color: inherit;
+    font-weight: 600;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .person,
+  .team---members {
+    width: calc(50% - 40px);
+    margin: 15px 5px;
+  }
+  .person img {
+    height: 1000px;
+  }
+  .team---members img {
+    height: 1000px;
+  }
+  .founder-image img {
+    width: 200px;
+    margin-top: 39%;
+  }
+  .founder-text h2 {
+    width: 400px;
+  }
+  .founder-text p {
+    margin: none;
+    width: 500px;
+  }
+  .founder-introduction {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 983px) {
+  .person,
+  .team---members {
+    width: calc(100% - 40px);
+    margin: 15px 5px;
+  }
+  .person img {
+    height: 1000px;
+  }
+  .team---members img {
+    height: 1000px;
+  }
+  .founder-introduction {
+    justify-content: center;
+  }
+  .culture--in--mohshop {
+    display: block;
+    padding-left: 20px;
+    align-items: center;
+  }
+}
+
+/* package  */
+@media only screen and (max-width: 1260px) and (min-width: 1024px) {
+  .package--details img {
+    height: 400px;
+  }
+  .package--details p {
+    padding: 2% 15%;
   }
 }

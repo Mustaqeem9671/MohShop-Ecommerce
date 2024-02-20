@@ -1,7 +1,6 @@
 /* MenCategories.css */
 
 .men-Categories {
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 20px;
 }
@@ -71,7 +70,7 @@
 
 @media only screen and (max-width: 983px) {
   .men-card {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     margin: 15px 5px; /* Adjust the margins for spacing between cards */
   }
 }

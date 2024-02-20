@@ -313,12 +313,12 @@ const HomeTrendings = () => {
           ))}
         </div>
         {displayedItems > 4 && (
-          <button className="close-button" onClick={handleClose}>
+          <button  style={{ color: "black", margin: "5px 1%", fontWeight: "600" }} className="btn btn-primary" onClick={handleClose}>
             Close
           </button>
         )}
         {displayedItems < trendingItems.length && (
-          <button className="see-more-button" onClick={handleSeeMore}>
+          <button  style={{ color: "black", margin: "5px 1%", fontWeight: "600" }} className="btn btn-primary" onClick={handleSeeMore}>
             See More
           </button>
         )}
@@ -354,7 +354,7 @@ const HomeTrendings = () => {
           {trendingFootwears.slice(0, displayFootwears).map((x) => (
             <div key={x.id} className="footWear-trending-item">
               <img src={x.image} alt={x.title} />
-              <h2>{x.brand}</h2>
+              <h3>{x.brand}</h3>
               <h3>{x.title}</h3>
               <p>{x.price}</p>
             </div>
@@ -362,12 +362,20 @@ const HomeTrendings = () => {
         </div>
 
         {displayFootwears > 4 && (
-          <button className="close-button" onClick={handleCloseFootwears}>
+          <button
+            style={{ color: "black", margin: "5px 1%", fontWeight: "600" }}
+            className="btn btn-primary"
+            onClick={handleCloseFootwears}
+          >
             Close
           </button>
         )}
         {displayFootwears < trendingFootwears.length && (
-          <button className="see-more-button" onClick={handleSeeMoreFootwears}>
+          <button
+            style={{ color: "black", margin: "5px 1%", fontWeight: "600" }}
+            className="btn btn-primary"
+            onClick={handleSeeMoreFootwears}
+          >
             See More
           </button>
         )}
