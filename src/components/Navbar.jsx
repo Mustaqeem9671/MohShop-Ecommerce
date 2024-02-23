@@ -36,6 +36,7 @@ const Navbar = () => {
       <a
         className={`nav__hamburger ${navActive ? "active" : ""}`}
         onClick={toggleNav}
+        href=""
       >
         <span className="nav__hamburger__line"></span>
         <span className="nav__hamburger__line"></span>
@@ -124,10 +125,10 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              to="/mainPage"
+              to="/myaccount"
               className="navbar--content"
             >
-              Main page
+              My Account
             </Link>
           </li>
         </ul>

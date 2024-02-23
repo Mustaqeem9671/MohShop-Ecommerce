@@ -1,0 +1,20 @@
+.my-account-page {
+  margin-top: 7%;
+  padding: 20px;
+}
+.account--info {
+  display: flex;
+  justify-content: space-between;
+}
+.my--account--buttons {
+  display: block;
+  background-color: aquamarine;
+  width: fit-content;
+  padding: 10px;
+}
+.my--account--buttons button {
+  display: block;
+  padding: 5px;
+  margin: 20px 0;
+  border: none;
+}

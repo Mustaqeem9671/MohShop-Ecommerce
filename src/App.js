@@ -20,6 +20,7 @@ import Profile from "./authPages/Profile";
 import NewUserRegistration from "./authPages/NewUserRegistration";
 import MainPage from "./welcome/MainPage";
 import FavoritesPage from "./components/FavoritesPage";
+import MyAccount from "./components/MyAccount/MyAccount";
 // import NavbarHeader from "./welcome/NavbarHeader";
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/contactpage" element={<ContactPage />} />
           <Route path="/favoritespage" element={<FavoritesPage />} />
-
+          <Route path="/myaccount" element={<MyAccount />} />
           <Route path="/men" element={<MenCategories />} />
           <Route path="/women" element={<WomenCategories />} />
           <Route path="/children" element={<ChildrenCategories />} />
